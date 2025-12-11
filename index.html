@@ -88,7 +88,7 @@
         </div>
 
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: December 10, 2025</p>
+        <p class="last-updated">Last Updated: December 11, 2025</p>
 
         <h2>1. Introduction</h2>
         <p>Welcome to <strong>Baby Soma</strong> ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App").</p>
@@ -103,6 +103,9 @@
             <li><strong>Child Profile Data:</strong> To provide sleep tracking and analysis, we collect your child's <strong>name</strong>, <strong>birth date</strong>, and <strong>gender</strong>. You may optionally upload a <strong>profile photo</strong>.</li>
             <li><strong>Sleep Data:</strong> We collect the sleep logs you enter, including sleep start/end times, wake windows, and sleep quality notes.</li>
             <li><strong>AI Chat Interactions:</strong> When you use our AI Sleep Coach, the text of your questions and the context of your child's sleep data are processed to generate responses.</li>
+            <li><strong>Family Collaboration Data:</strong> When you use the Family feature, we collect information about family members you invite (email addresses or phone numbers) and store family chat messages, including text messages, photos, and voice messages that you send within the family chat.</li>
+            <li><strong>Daily Digest Preferences:</strong> We store your preferences for receiving daily summaries and insights about your child's sleep patterns.</li>
+            <li><strong>Sleep Settings and Preferences:</strong> We collect your sleep coach settings, including desired wake-up times, bedtime preferences, sleep issues, notification preferences, and lullaby player settings.</li>
         </ul>
 
         <h3>B. Information Collected Automatically</h3>
@@ -110,25 +113,50 @@
             <li><strong>Device Information:</strong> We collect device ID (IDFA/IDFV), device model, operating system version, and IP address.</li>
             <li><strong>Usage Data:</strong> We track how you interact with the App, such as features used, time spent, and buttons tapped.</li>
             <li><strong>Advertising Data:</strong> If you use the free version of the App, we use <strong>Google AdMob</strong> to display advertisements. AdMob may collect your device identifier (IDFA) to show personalized ads (if you have granted permission via App Tracking Transparency).</li>
+            <li><strong>Push Notification Tokens:</strong> We collect and store Firebase Cloud Messaging (FCM) tokens to send you push notifications about family chat messages, sleep reminders, and growth spurt alerts.</li>
+            <li><strong>Live Activity Data:</strong> When you use the sleep tracking feature, we may use iOS Live Activities and Dynamic Island to display real-time sleep status on your lock screen and Dynamic Island.</li>
         </ul>
+
+        <h3>C. Permissions We Request</h3>
+        <p>The App may request the following device permissions to provide specific features:</p>
+        <ul>
+            <li><strong>Photo Library:</strong> To allow you to upload profile pictures for your child and share photos in family chat. You can also save photos from family chat to your device.</li>
+            <li><strong>Camera:</strong> To take photos directly for family chat messages or profile pictures.</li>
+            <li><strong>Microphone:</strong> To record and send voice messages in family chat.</li>
+            <li><strong>Notifications:</strong> To send you reminders about sleep schedules, family chat messages, and important alerts.</li>
+        </ul>
+        <p>You can manage these permissions at any time in your device settings. Denying permissions may limit certain features but will not prevent you from using core sleep tracking functionality.</p>
 
         <h2>3. How We Use Your Information</h2>
         <p>We use the collected information for the following purposes:</p>
         <ul>
-            <li><strong>Core Functionality:</strong> To track your child's sleep, calculate wake windows, and predict growth spurts.</li>
-            <li><strong>AI Analysis:</strong> We use <strong>OpenAI</strong> services to analyze your child's sleep patterns and provide personalized advice in the AI Chat.</li>
+            <li><strong>Core Functionality:</strong> To track your child's sleep, calculate wake windows, predict growth spurts, and generate personalized sleep schedules.</li>
+            <li><strong>AI Analysis:</strong> We use <strong>OpenAI</strong> services (GPT-4o-mini model) to analyze your child's sleep patterns and provide personalized advice in the AI Chat.</li>
             <li><strong>Account Management:</strong> To manage your account, subscriptions, and sync data across devices via <strong>Firebase</strong>.</li>
             <li><strong>Advertising:</strong> To display rewarded video ads via <strong>Google AdMob</strong> (for non-premium users).</li>
             <li><strong>Improvement:</strong> To analyze usage trends and improve the App's performance and features.</li>
+            <li><strong>Family Collaboration:</strong> To enable family members to share access to a child's profile, communicate via family chat, and receive real-time updates about the child's activities.</li>
+            <li><strong>Notifications:</strong> To send push notifications about sleep reminders, family chat messages, growth spurt alerts, and other important updates you've chosen to receive.</li>
+            <li><strong>Daily Insights:</strong> To generate and deliver daily digest summaries of your child's sleep patterns and provide actionable recommendations.</li>
+            <li><strong>Cloud Storage:</strong> To store uploaded photos and voice messages in Firebase Cloud Storage for family chat functionality.</li>
         </ul>
 
         <h2>4. Sharing of Your Information</h2>
         <p>We do not sell your personal data. We share information only with the following third-party service providers who assist us in operating the App:</p>
         <ul>
-            <li><strong>Google Firebase:</strong> For authentication, database storage (Firestore), cloud functions, and analytics.</li>
+            <li><strong>Google Firebase:</strong> For authentication, database storage (Firestore), cloud functions, cloud storage (for photos and voice messages), analytics, and push notifications (FCM).</li>
             <li><strong>OpenAI:</strong> We send anonymized sleep data and your questions to OpenAI to generate AI responses.</li>
             <li><strong>Google AdMob:</strong> For delivering advertising content.</li>
             <li><strong>RevenueCat / Apple StoreKit:</strong> For processing subscription payments.</li>
+        </ul>
+        
+        <h3>Sharing Within Family Groups</h3>
+        <p>When you invite family members to access your child's profile:</p>
+        <ul>
+            <li>All invited family members (guardians) can view the child's sleep data, settings, and growth information.</li>
+            <li>Family chat messages, photos, and voice messages are shared with all members who have access to that child's profile.</li>
+            <li>You control who has access by sending invitations. You can remove family members' access at any time from the Family section.</li>
+            <li>Each family member sees the same synchronized data in real-time through Firebase Firestore.</li>
         </ul>
 
         <div class="disclaimer">
@@ -140,12 +168,42 @@
         <p>We retain your data as long as your account is active.</p>
         <ul>
             <li><strong>Delete Account:</strong> You can delete your account and all associated data at any time directly within the App settings (<code>Settings</code> -> <code>Delete Account</code>). Upon request, your data is permanently removed from our servers.</li>
+            <li><strong>Family Chat Data:</strong> When you delete your account, all family chat messages, photos, and voice messages you created are also deleted. However, data shared with other family members will remain in their access until they also delete their accounts or remove the child profile.</li>
+            <li><strong>Invitation Data:</strong> Pending invitations are automatically expired after a certain period and can be manually cancelled at any time.</li>
+            <li><strong>Cloud Storage:</strong> Uploaded media files (photos and voice messages) are permanently deleted when the associated messages or accounts are deleted.</li>
         </ul>
+
+        <h2>7. Data Security</h2>
+        <p>We implement industry-standard security measures to protect your data:</p>
+        <ul>
+            <li><strong>Encryption:</strong> All data transmitted between your device and our servers is encrypted using SSL/TLS protocols.</li>
+            <li><strong>Firebase Security Rules:</strong> We use Firestore Security Rules to ensure that only authorized users (account owners and invited guardians) can access child profile data and family chat messages.</li>
+            <li><strong>Authentication:</strong> We use Firebase Authentication with secure token-based access control.</li>
+            <li><strong>Cloud Storage Security:</strong> Uploaded files are stored securely in Firebase Cloud Storage with access restricted to authorized family members only.</li>
+        </ul>
+        <p>While we strive to use commercially acceptable means to protect your personal information, no method of transmission over the Internet or electronic storage is 100% secure.</p>
 
         <h2>7. Children's Privacy (COPPA)</h2>
         <p>Our App is intended for use by <strong>parents and guardians</strong> (users over 18). We do not knowingly collect personal information directly from children under 13. The data about children is provided solely by the parent/guardian who has the legal authority to do so.</p>
 
-        <h2>8. Contact Us</h2>
+        <h2>8. Your Rights and Choices</h2>
+        <p>You have the following rights regarding your personal information:</p>
+        <ul>
+            <li><strong>Access and Update:</strong> You can view and edit your account information, child profiles, and settings at any time within the App.</li>
+            <li><strong>Delete Data:</strong> You can delete specific sleep sessions, chat messages, or your entire account through the App settings.</li>
+            <li><strong>Manage Family Access:</strong> You can invite, view, and remove family members' access to your child's profile at any time.</li>
+            <li><strong>Notification Preferences:</strong> You can control which types of push notifications you receive in the App's settings or your device's notification settings.</li>
+            <li><strong>Advertising Preferences:</strong> You can limit ad tracking through your device's privacy settings (iOS: Settings -> Privacy -> Tracking).</li>
+            <li><strong>Export Data:</strong> Contact us if you wish to receive a copy of your data.</li>
+        </ul>
+
+        <h2>9. International Users</h2>
+        <p>Your information may be transferred to and maintained on servers located outside of your state, province, country, or other governmental jurisdiction where data protection laws may differ. By using the App, you consent to the transfer of your information to the United States and other countries where our service providers operate.</p>
+
+        <h2>10. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. Significant changes will be communicated through the App or via email.</p>
+
+        <h2>11. Contact Us</h2>
         <p>If you have questions about this Privacy Policy, please contact us at:</p>
         <p>
             <strong>APPROVEX LLC</strong><br>
